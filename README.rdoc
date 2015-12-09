@@ -1,28 +1,42 @@
-== README
+= Clarify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This simple tool is designed to help you clarify what it is your business or organisation does, why you started it, and how people might experience (and get value from) it.
 
-Things you may want to cover:
+====Tech Stack
 
-* Ruby version
+Clarify is an in-house project created by Click. 
 
-* System dependencies
+Clarify can be used here: http://www.helpmeclarify.com
 
-* Configuration
+The aim of Clarify is to present a great looking application where user experience is vital to the success of the application as it relies on the user's input. 
 
-* Database creation
+To meet our goal to provide a clean, seamless experience where the user could fill out multiple questions with out fatigue, we created a single page application. A single page removes the need for browser reloading and facilitates minimal navigation.
 
-* Database initialization
+Rails was chosen to be the best tool to create Clarify's back-end infrustructure that would provide an API for the Angular Framework to consume.
 
-* How to run the test suite
+======Rails
+Rails as the back-end framework gave us a great tool to provide an easy prototypical API where we could manage the data endpoints efficiently and easily intergrate with Angular.
 
-* Services (job queues, cache servers, search engines, etc.)
+Using Rails gave us the advantage of using many well-established gems that dramatically saves us writing repetitive code. We implemented Refinery CMS which provided us with an admin pannel for maintaining the applications submissions for analysis.
 
-* Deployment instructions
+Using Heroku to host our application allowed us to deploy code daily and allowed us to iterativley test the application on a live site, which made debugging faster and smoother. As the application was beta tested, Heroku allowed us to easily ramp up performance by increasing the dynos when the application was ready for launch.
 
-* ...
+======Angular
 
+Angular provided an easy platform to connect to our API served by our Rails back-end. Angular's data binding and dependency injection provides an easy solution to dynamically updating data on the application.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This allowed our users to submit their data dynamically. Angular allowed us to submit the form seamlessly to our API data point taking away the need for browser reloads allowing the user to navigate without obstruction.
+
+By result, the progress of the user is saved without hitting a submit button, allowing the user to come back at a later point and start the applcation from where they left off.
+
+====Analysis
+
+A challenge in building Clarify, is that it was difficult to find the best practise of integrating Angular with Rails.
+
+We wanted to try and integrate Rails' convention with our Angular controller and services to create a clean and manageable source code.
+
+There is much documentation detailing how to to integreate Angular with Rails, however many proposed different patterns and thoughts that were contradictory. We decided to take more time establisbing our own unique convention.
+
+In the future, this would lead to an unstable Angular controller with many edge cases failing due to the complexity of the code.
+
+However, as this was the first time we integrated Angular with a Rails project, laying a foundation for future Angular and Rails projects to work better together from understanding and creating a cleaner Angular strucutre to be built on top of Rails.
