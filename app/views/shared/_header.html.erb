@@ -1,0 +1,45 @@
+<header id="primary-header">
+  <div class="container">
+    <% if params[:controller] == 'high_voltage/pages' %>
+      <div class="company-logo clearfix"><a href="http://www.helpmeclarify.com/#/"><h1 class="hidden">Clarify</h1></a></div>
+    <% else %>
+      <div class="company-logo clearfix"><h1 class="hidden">Clarify</h1></div>
+    <% end %>
+
+    <div class="form-progress">
+      <ul>
+        <li class="stage-one-progress"></li>
+        <li class="stage-two-progress"></li>
+        <li class="stage-three-progress"></li>
+        <li class="stage-four-progress"></li>
+      </ul>
+    </div>
+
+    <nav id="primary-nav" class="clearfix">
+      <div class="hamburger-menu">
+        <span class="menu-item"></span>
+        <span class="menu-item"></span>
+        <span class="menu-item"></span>
+      </div>
+    </nav>
+
+    <ul id="menu" class="navigation-menu">
+      <h4>Menu</h4>
+      <li><a href="/retrieve" data-page="retrieve">Retrieve previous work</a></li>
+      <li class="about"><a href="/about" data-page="about">About</a></li>
+      <li><a href="/next-steps" data-page="next-steps">Next steps</a></li>
+      <li><a href="/contact" data-page="contact">Contact</a></li>
+      <span class="links">&copy; <a href="http://www.builtbyclick.com" target="_blank">Click Studio</a> &amp; <a href="http://www.1977design.com/" target="_blank">1977 Design</a> 2014</span>
+    </ul>
+
+    <ul id="mobile-menu" class="navigation-menu">
+      <h4>Menu</h4>
+      <li><a href="/retrieve" data-page="retrieve">Retrieve previous work</a></li>
+      <li><a href="/about" data-page="about">About</a></li>
+      <li><a href="/next-steps" data-page="next-steps">Next steps</a></li>
+      <li><a href="/contact" data-page="contact">Contact</a></li>
+      <span class="links">&copy; <a href="http://www.builtbyclick.com" target="_blank">Click Studio</a> &amp; <a href="http://www.1977design.com/" target="_blank">1977 Design</a> 2015</span>
+    </ul>
+    
+  </div>
+</header>

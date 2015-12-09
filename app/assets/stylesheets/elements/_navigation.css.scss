@@ -1,0 +1,193 @@
+@import "../_all-globals";
+
+//** NAVIGATION STYLING **//
+
+#primary-nav {
+  float: right;
+  width: 90px;
+
+  @include breakpoint($max-large-mobile--portrait-width) {
+    width: 80px;
+  }
+
+  .hamburger-menu {
+    float: right;
+    height: 75px;
+    padding: 23px;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .menu-item {
+      background: $light-grey;
+      display: block;
+      height: 3px;
+      margin: 0 0 10px;
+      transition-duration: 1s;
+      transition-property: all;
+      width: 40px;
+
+      @include breakpoint($max-large-mobile--portrait-width) {
+        margin: 0 0 5px;
+        width: 30px;
+      }
+    }
+    
+    &.open {
+      margin-bottom: -6px;
+      margin-right: 275px;
+      margin-top: 6px;
+
+      .menu-item {
+        margin: 0 0 5px;
+        
+        &:first-child {
+          transform: rotate(45deg);
+          transform-origin: 10px;
+
+          @include breakpoint($max-large-mobile--portrait-width) {
+            transform-origin: 5px;
+          }
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          transform-origin: 8px;
+
+          @include breakpoint($max-large-mobile--portrait-width) {
+            transform-origin: 3px;
+          }
+        }
+      }
+
+      @include breakpoint($max-main-container) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// styles specific to desktop nav //
+#menu {
+  background-color: $black;
+  height: 100%;
+  left: 100%;
+  margin: 0;
+  min-height: 600px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  transition: all 1s ease-in-out;
+  width: calc(((100% - 1024px)/2) + 290px);
+  z-index: 10;
+
+  &.active {
+    left: calc(1024px + ((100% - 1024px)/2) - 290px );
+  }
+
+  @include breakpoint($max-main-container) {
+    display: none;
+  }
+
+  li a, h4 {
+    height: 75px;
+    line-height: 75px;
+    text-decoration: none;
+  }
+
+  li:first-of-type {
+    margin-bottom: 75px;
+  }
+
+  span {
+    height: 75px;
+    line-height: 75px;
+    position: absolute;
+  }
+}
+
+// styles specific to mobile nav //
+#mobile-menu {
+  background-color: $black;
+  display: none;
+  left: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 75px;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  z-index: $z-index-layer--first;
+  
+  @include breakpoint($max-main-container) {
+    display: block;
+  }
+
+  &.active {
+    max-height: 700px;
+  }
+
+  li a, h4 {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  li:first-of-type {
+    margin-bottom: 50px;
+  }
+
+  span {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+  }
+}
+
+// styles common across both navs //
+.navigation-menu {
+  li a, h4 {
+    border-bottom: 1px solid white;
+    box-sizing: content-box;
+    color: white;
+    display: block;
+    font-weight: 900;
+    list-style: none;
+    margin: 0;
+    padding-left: 40px;
+    text-transform: uppercase;
+    transition: all 0.7s ease-in-out;
+  }
+
+  li {
+    list-style: none;
+
+    &.about {
+      border-top: 1px solid $dark-grey;
+    }
+
+    a {
+      border-color: $dark-grey;
+      font-weight: 700;
+
+      &:hover {
+        background: white;
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  span {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}

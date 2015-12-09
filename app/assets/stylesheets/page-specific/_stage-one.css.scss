@@ -1,0 +1,54 @@
+ @import "../_all-globals";
+
+#stage-one {
+  background-color: $stage-one-bg;
+
+  .save-proceed-button {
+    color: $stage-one-bg;
+    width: 60%;
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      width: 80%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .formfield-overlay-wrapper.email .formfield-wrapper.saving:after {
+    opacity: 0;
+  }
+
+  .formfield-overlay-wrapper.email .formfield-wrapper.saving-email:after {
+    opacity: 1 !important;
+  }
+
+  #already-taken {
+    background: $error;
+    font-weight: normal;
+    left: 0;
+    opacity: 0;
+    padding: 1.5em;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease-in-out;
+    width: 100%;
+
+    &.active {
+      opacity: 1;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  .disabled {
+
+    &:before, #email {
+      background: $lighter-grey !important;
+    }
+  }
+
+}

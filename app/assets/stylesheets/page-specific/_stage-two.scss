@@ -1,0 +1,25 @@
+@import "../_all-globals";
+
+#stage-two {
+  background-color: $stage-two-bg;
+
+  p {
+    font-size: em($large-content-size);
+    margin: em($element-margin--thin, $large-content-size) 0;
+  }
+
+  .save-proceed-button {
+    color: $stage-two-bg;
+    float: right;
+    width: 65%;
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      float: none;
+      width: 80%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

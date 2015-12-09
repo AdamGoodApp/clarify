@@ -1,0 +1,224 @@
+@import "../_all-globals";
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
+
+  @include breakpoint($max-main-container) {
+    width: 90%;
+  }
+}
+
+//** PAGES **//
+.pages main {
+  margin: 0 auto;
+  padding-top: 120px;
+  width: 1024px;
+
+  @include breakpoint($max-main-container) {
+    width: 90%;
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+
+
+//** OVERLAY FOR PAGES **//
+#pages {
+  background: rgba($white, 0.95);
+  height: 100%;
+  left: -100%;
+  overflow: scroll;
+  padding: 120px 0 30px;
+  position: fixed;
+  top: 0;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  z-index: 799;
+
+  @include breakpoint($max-main-container) {
+    padding: 450px 25px 25px;
+
+  }
+
+  &.active {
+    left: 0%;
+  }
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  article {
+    box-sizing: content-box;
+    max-height: 0%;
+    padding-left: calc((100% - 1024px)/2 + 1px);
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    width: calc(1024px - 340px);
+
+    @include breakpoint($max-main-container) {
+      padding-left: 0; 
+      width: 100%;
+    }
+
+    * {
+      color: black;
+    }
+
+    &.active {
+      max-height: 100%;
+      overflow: scroll;
+    }
+  }
+}
+
+//** MAIN SECTION STYLING **//
+.section-content {
+  display: none;
+  margin: 0;
+}
+
+#welcome {
+  height: 100%;
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-layer--fourth;
+
+  &.pushed {
+    top: -87.5%;
+  }
+
+  &.offscreen {
+    top: -100%;
+  }
+}
+
+#clarify-description {
+  height: 100%;
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 93%;
+  width: 100%;
+  z-index: $z-index-layer--third;
+
+  &.active {
+    top: 12.5%;
+
+    .up-arrow {
+      height: 50px;
+      top: 0;
+    }
+  }
+
+  &.offscreen {
+    top: -100%;
+  }
+}
+
+.accordion {
+  height: 100%;
+  min-height: 100%;
+  overflow: scroll;
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 95%;
+  width: 100%;
+  z-index: $z-index-layer--second;   
+
+  &.active {
+    padding-top: 72px;
+    top: 0;
+
+    > section {
+      padding: 26px 0;
+
+      h4 {
+        display: block;
+        max-height: 70px;
+        text-align: center;
+      } 
+    }
+  }
+
+  > section {
+    border: none;
+    overflow: hidden;
+    padding: 5px 0;
+    transition: all 1s ease-in-out;
+
+    h2, h4 {
+      transition: all 1s ease-in-out;
+    }
+
+    h2 {
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    h4 {
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0.4;
+    } 
+
+    &.active {
+      padding: 100px 0;
+
+      h2 {
+        max-height: 70px;
+        min-height: 70px;
+      }
+
+      h4 {
+        max-height: 0;
+      }
+    }
+
+    &.offscreen {
+      cursor: pointer;
+
+      h4 {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-field-description {
+    float: right;
+    padding: em($element-padding--thin);
+    position: relative;
+    width: 50%;
+
+    @include breakpoint($max-large-tablet) {
+      padding: 0 0 25px;
+      width: 100%;
+    }
+
+    > div {
+      height: 100%;
+      overflow: scroll;
+    }
+
+    h5 {
+      font-weight: $font-weight--ultra-bold;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }  
+}

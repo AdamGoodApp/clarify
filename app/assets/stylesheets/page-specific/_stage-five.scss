@@ -1,0 +1,115 @@
+@import "../_all-globals";
+
+#stage-five {
+  background-color: $stage-five-bg;
+
+  &.active {
+    padding-bottom: $element-margin--regular;
+  }
+
+  .section-content {
+
+    p {
+      margin: em($element-margin--thin, $large-content-size) 0;
+    }
+
+    a {
+      color: white;
+    }
+
+    footer {
+      display: block;
+      float: left;
+      margin-top: $element-margin--ultra-thick;
+      width: 100%;
+
+      @include breakpoint($max-tablet) {
+        display: none;
+      }
+    }
+
+    .final-section-copy {
+      @include span(8);
+
+      @include breakpoint($max-tablet) {
+        @include span(12);
+      }
+    }
+
+    .social-media-buttons {
+      margin-top: 40px;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 30px;
+      }
+
+      .button {
+        background-color: rgba(0,0,0,0.2);
+        border: 3px solid rgba(0,0,0,0);
+        color: $overlay-bg;
+        float: left;
+        line-height: 100px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        width: 200px;
+
+        &:hover {
+          background-color: transparent;
+          border: 3px solid rgba(0,0,0,0.2);
+        }
+      }
+    }
+
+    aside.founder-logos {
+      @include span(3.5 omega);
+
+      @include breakpoint($max-tablet) {
+        @include span(5);
+
+        height: auto;
+        margin-top: $element-margin--ultra-thick;
+      }
+
+      border-left: 4px solid #bfdff2;
+      color: #bfdff2;
+      height: 129px;
+      letter-spacing: -1px;
+      margin-top: -50px;
+      padding-left: 50px;
+
+      ul {
+        list-style: none;
+        margin: 20px 0 0 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        list-style: none;
+        width: 49%;
+        vertical-align: top;
+
+        &:first-child {
+          padding-right: 25px;
+        }
+
+        &:last-child {
+          padding-left: 25px;
+        }
+      }
+
+      a {
+        color: #bfdff2;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

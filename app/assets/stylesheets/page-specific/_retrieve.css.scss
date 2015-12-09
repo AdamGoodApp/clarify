@@ -1,0 +1,43 @@
+@import "../_all-globals";
+
+#retrieve {
+
+    form {
+        margin-top: 10px;
+    }
+
+    h3 {
+        margin: 1.4em 0 0.6em;
+    }
+
+    input[type="email"] {
+        border: 3px solid #a9ddf4;
+        padding: 0 10px;
+    }
+
+    input[type="submit"] {
+        background: $welcome-page-bg;
+        border: 3px solid $welcome-page-bg;
+        color: white;
+
+        &:hover {
+            background: transparent;
+            color: $welcome-page-bg;
+        }
+    }
+
+    .feedback {
+        color: white;
+        display: none;
+        margin-top: 1em;
+        padding: 1em;
+
+        &.success {
+            background: $stage-one-secondary;
+        }
+
+        &.error {
+            background: $error;
+        }
+    }
+}

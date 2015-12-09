@@ -1,0 +1,65 @@
+@import "../_all-globals";
+
+//** DESCRIPTION STYLING **//
+
+#clarify-description {
+  background: $description-page-bg;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 0 em($element-padding--ultra-thick);
+  text-align: center;
+
+  p {
+    font-size: em($large-content-size);
+    margin-bottom: $element-margin--thick;
+
+    &:first-of-type {
+      margin-top: $element-margin--thick;
+    }
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+
+      &:first-of-type {
+        padding: 0;
+      }
+
+      &:nth-child(2) {
+        padding: 0;
+      }
+    }
+  }
+
+  .description-button-wrapper {
+    margin: 0 auto 50px auto;
+    width: 60%;
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      width: 100%;
+    }
+
+    button {
+      width: 250px;
+    }
+
+    .get-started {
+      @include button-text($description-page-bg);
+    }
+  }
+
+  .up-arrow {
+    background: image-url('up_arrow.svg') no-repeat top center;
+    background-color: $welcome-page-bg;
+    background-size: 50px;
+    cursor: pointer;
+    height: 0;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    transition: all 0.7s ease-in-out;
+    width: 100px;
+
+    &:hover {
+      margin-top: -15px;
+    }
+  }
+}

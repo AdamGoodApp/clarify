@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <% if params[:controller] == 'high_voltage/pages' %>
+    <html class="no-js pages">
+  <% else %>
+    <html ng-app="brandApp" class="no-js">
+  <% end %>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Clarify</title>
+
+    <!-- FAVICON ETC -->
+    <link rel="apple-touch-icon" sizes="57x57" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= request.protocol + request.host %>/assets/favicons/apple-touch-icon-180x180.png">
+    <meta name="apple-mobile-web-app-title" content="Clarify">
+    <link rel="shortcut icon" href="<%= request.protocol + request.host %>/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="<%= request.protocol + request.host %>/assets/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="<%= request.protocol + request.host %>/assets/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="<%= request.protocol + request.host %>/assets/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="<%= request.protocol + request.host %>/assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="<%= request.protocol + request.host %>/assets/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<%= request.protocol + request.host %>/assets/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="<%= request.protocol + request.host %>/assets/favicons/browserconfig.xml">
+    <meta name="application-name" content="Clarify">
+
+    <!-- META DESCRIPTION AND OPEN GRAPH -->
+    <meta name="description" content="A tool to improve how you communicate what your business does, and the value it provides">
+    <meta property='og:title' content="Clarify">
+    <meta property='og:type' content="website">
+    <meta property='og:url' content="<%= request.original_url %>">
+    <meta property='og:description' content="A tool to improve how you communicate what your business does, and the value it provides">
+    <meta property='og:image' content="<%= content_for?(:meta_image_url) ? yield(:meta_image_url) : "" + request.protocol + request.host + "/assets/favicons/apple-touch-icon-180x180.png" %>">
+    
+    <!-- STYLESHEETS -->
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <!--[if lte IE 9]>
+      <%= stylesheet_link_tag "ie", :media => "all" %>
+    <![endif]-->
+
+    <!-- JAVASCRIPT -->
+    <%= javascript_include_tag "application" %>
+
+    <!-- TYPEKIT -->
+    <script src="//use.typekit.net/dat1ato.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+
+  <body>
+    <%= render 'shared/header' %>
+
+    <aside id="pages">
+      <%= render 'pages/about' %>
+      <%= render 'pages/contact' %>
+      <%= render 'pages/next_steps' %>
+      <%= render 'pages/retrieve' %>
+    </aside>
+
+    <main ng-view>
+      <%= yield %>
+    </main>
+
+    <% if Rails.env.production? %>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-58682283-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    <% end %>
+
+  </body>
+</html>

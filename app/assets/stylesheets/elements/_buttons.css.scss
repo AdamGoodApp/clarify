@@ -1,0 +1,79 @@
+@import "../_all-globals";
+
+.button {
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $font-weight--bold;
+  height: 100px;
+  margin-bottom: em(10px, $button-font-size);
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.7s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.main-button {
+  background-color: $white;
+  border: 3px solid $white;
+  box-sizing: border-box;
+}
+
+.opaque-button {
+  background-color: transparent;
+  border: 3px solid rgba($white, 0.5);
+  color: rgba($white, 0.5);
+
+  &:hover {
+    border: 3px solid rgba($white, 1);
+    color: rgba($white, 1);
+  }
+}
+
+.save-button-wrapper {
+  margin: em($element-margin--ultra-thick) auto em($element-margin--thin);
+  text-align: center;
+  width: 60%;
+
+  @include breakpoint($max-large-tablet) {
+    width: 80%;
+  }
+
+  @include breakpoint($max-large-mobile--landscape-width) {
+    width: 100%;
+  }
+
+  .save-proceed-button {
+    background-color: $white;
+    border: 3px solid $white;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: transparent;
+      color: $white;
+    }
+  }
+}
+
+.main-button.back-button {
+  background: transparent;
+  border: 3px solid $white;
+  color: $white;
+  margin-right: 4%;
+  opacity: 0.5;
+  width: 30%;
+
+  @include breakpoint($max-large-mobile--landscape-width) {
+    margin-right: 0;
+    width: 80%;
+  }
+
+  &:hover {
+    border: 3px solid rgba($white, 1);
+    color: rgba($white, 1);
+    opacity: 1;
+  }
+}

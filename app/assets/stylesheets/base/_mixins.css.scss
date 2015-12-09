@@ -1,0 +1,8 @@
+@mixin button-text($color, $hover-color: white) {
+  color: $color;
+
+  &:hover {
+    background: $color;
+    color: $hover-color;
+  }
+}

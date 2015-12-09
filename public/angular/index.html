@@ -1,0 +1,723 @@
+<!-- WELCOME SECTION -->
+<section id="welcome">
+  <div class="container centered-content">
+    <div class="centered-content-wrapper">
+      <h2>Ever struggle to communicate what your business does, and the value it provides?</h2>
+
+      <div class="home-button-wrapper">
+        <button class="button read-more main-button">Read More</button>
+        <a class="button opaque-button open-page" href="/next-steps" data-page="retrieve">Retrieve previous work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clarify-description">
+    <div class="container centered-content">
+      <div class="centered-content-wrapper">
+      <p>This simple tool is designed to help you clarify what it is your business or organisation does, why you started it, and how people might experience (and get value from) it.</p>
+
+      <p>We recommend using Clarify over two or three separate sessions, each roughly 30 minutes - 1 hour long. After entering your email address, your progress is automatically saved.</p>
+
+      <p>Both your content and email address will be stored securely. Your content will remain only visible to you, and your email address will not be used for any purpose other than allowing you to retrieve your work.</p>
+
+      <div class="description-button-wrapper">
+        <button class="button get-started main-button">Get Started</button>
+      </div>
+
+      <!-- <aside class="note">Note: It's best to tackle this process in a few short sessions. Try three sessions of 1 hour, a few days apart from each other. We've made it easy to save your progress, so you can come back at any time.</aside> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 1 QUESTIONS -->
+<div class="accordion">
+  <section id="stage-one" class="questionnaire">
+    <div class="container">
+      <h2 class="accordion-title">Getting Started</h2>
+      <h4>1. Getting started</h4>
+    </div>
+
+    <form class="section-content" data-parsley-validate data-parsley-focus="none">
+      <div class="container">
+        <label><h3>Email address</h3></label>
+      </div>
+      <div class="answer-container input">
+        <div class="container clearfix">
+
+          <aside class="form-field-description input" id="email-aside">
+            Please enter your email address so you can retrieve your progress at a later date. Your email address will be kept securely, and we won't share it with anyone else.
+            <div class="tooltip">
+              See here for tips
+            </div>
+            <div id="already-taken">
+              Sorry, but you can currently only create one brand per email address. To retrieve your previous work, please use your unique Clarify URL. If you've lost this, <a href="/retrieve" data-page="retrieve" class="open-page">click here</a> to retrieve it.
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper input email">
+            <div class="formfield-wrapper">
+              <input type="email" id="email" ng-model="brand.brand.email" data-parsley-required
+                     data-parsley-error-message="Please enter your email address" />
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+            <div class="tooltip">
+              Write here
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Company name</h3></label>
+      </div>
+
+      <div class="answer-container input">
+        <div class="container clearfix">
+
+          <aside class="form-field-description input">
+            Please enter your company name.
+          </aside>
+
+          <div class="formfield-overlay-wrapper input">
+            <div class="formfield-wrapper">
+              <input type="text" ng-model="brand.brand.company" data-parsley-required
+                     data-parsley-error-message="Please enter your company name" />
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>What is it that your business does?</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <p>What does your business do, and what do you provide to people?</p>
+            <p>Keep this simple – it might be that you are a florist, and your product/service is selling beautifully designed bouquets of flowers.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.what_you_do" data-parsley-required
+                        data-parsley-error-message="Please complete to continue"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Why does your business exist?</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <p>Most businesses have the aim of making a profit – without one the business couldn’t continue – but is that the only reason for your business to exist?</p>
+            <p>Why was the business founded in the first place? It might be a passion, or it might have been a potential gap in the market was noticed. Also, what do you get from running the business, and why are you doing this rather than anything else?</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.why_you_do" data-parsley-required
+                        data-parsley-error-message="Please complete to continue"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>How might people experience the business?</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <p>One of the things that make your business unique is how you approach your work, and how you come across to the people you deal with.</p>
+            <p>What do you think is people’s experience of you and your business, and what would you hope it was? You might pride yourself on your pragmatism, or your business might be known for its’ fun approach.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.how_you_do" data-parsley-required
+                        data-parsley-error-message="Please complete to continue"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Who are your target audience?</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <p>Who is your target audience? Be as specific as possible here - too general a range will hinder your ability to identify with your audience.</p>
+            <p>What do you think your target audience might be looking for? You might want to consider factors such as your audience’s geography (e.g. local or national), their financial situation, or, if a client, the type of business they are.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.target_audience" data-parsley-required
+                        data-parsley-error-message="Please complete to continue"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Who are your competition?</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <p>It is extremely unlikely that you will be the only business with your product or service offering, so which businesses are your nearest competition?</p>
+            <p>It is important to consider that your competition might not necessarily offer exactly what you do, but might be something that attracts the same audience ‘spend’ (e.g. it could be argued that cinemas compete with video game producers, as they both compete for the same ‘entertainment’ spend).</p>
+            <p>Also, is your competition purely local, or is it geographically widespread?</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.competition_1" data-parsley-required
+                        data-parsley-error-message="Please complete to continue"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="save-button-wrapper">
+        <button class="button save-proceed-button main-button" ng-click="save()">Save and proceed to
+          next step</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- STAGE 2 INFO ABOUT BRANDS -->
+  <section id="stage-two">
+    <div class="container">
+      <h4>2. What this is</h4>
+      <h2 class="accordion-title">What this is</h2>
+      <div class="section-content">
+        <p>You’ve just taken the first steps to realise and clarify your brand.</p>
+
+        <p>This might come as a surprise, as your brand might not be what you  think it is.</p>
+
+        <p>Your brand is not your logo and colour scheme, or related to communications strategy or marketing plan – it is at the core of your business and should inform each of these elements.</p>
+
+        <p>In simple terms your brand is what explains and identifies who you are, what you do, how you do it – and the value of this to your clients, customers or users.</p>
+
+        <p>The next stages will help you realise and begin to clarify your brand simply.</p>
+
+        <div class="save-button-wrapper">
+
+          <button class="button save-proceed-button">Proceed to clarify your brand</button>
+          <button class="button main-button back-button opaque-button">Previous step</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAGE 3 QUESTIONS -->
+  <section id="stage-three" class="questionnaire">
+    <div class="container">
+      <h4>3. Clarify</h4>
+      <h2 class="accordion-title">Clarify</h2>
+    </div>
+
+    <form class="section-content" data-parsley-focus="none" data-parsley-validate>
+      <div class="container">
+        <label><h3>Proposition</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <div>
+              <h5>You Wrote</h5>
+              <p>{{brand.brand.what_you_do}}</p>
+              <br>
+              <h5>Now Think</h5>
+              <p>You’ve outlined what it is that you do. Let's refer to this as your business proposition.</p>
+              <p>Think about this from the perspective of potential customers or clients. Why might your business proposition be of interest to them? And importantly, what value (both monetary and emotional) might they find in the proposition of your business and brand?</p>
+              <button class="button examples-button">See Examples</button>
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.proposition" data-parsley-required
+                        data-parsley-error-message="Please complete to continue" tabindex="1"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="example-container clearfix">
+        <div class="container clearfix">
+
+          <aside class="answer-example _1">
+            <h3>Proposition example 1</h3>
+            <p>A business based in the UK specialises in Chinese social media for UK brands. Their business and brand proposition is; ‘The only UK agency that puts your brand top-of-mind with the affluent Chinese individual through engaging, culturally appropriate social media content.’ It is important to note the emphasis and focus on the value seen by the client in this business’ proposition.</p>
+          </aside>
+
+          <aside class="answer-example _2">
+            <div class="example-close"></div>
+            <h3>Proposition example 2</h3>
+            <p>A management company who works across the media spectrum explains their business and brand proposition as follows; ‘The talent management company that develops strategic and creative ideas by marrying talent and companies in the media sector who are looking to generate new revenue streams through exciting, innovative projects for the public’s enjoyment.’ Again, note the highlighting of the value they deliver to their clients, both in helping create exciting, innovative projects and also in generating new revenue streams for the client.</p>
+          </aside>
+
+          <aside class="example-explanation">
+            All examples given are from real businesses that we’ve worked with to realise and clarify their proposition. These examples were reached through a series of iterations and development, so don’t think you need to get something so succinct first time. Write a proposition then develop and rewrite here until you’re happy with it.
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Purpose</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <div>
+              <h5>You Wrote</h5>
+              <p>{{brand.brand.why_you_do}}</p>
+
+              <br>
+              <h5>Now Think</h5>
+              <p>You’ve explained why the business exists – let’s call this the purpose of the business.</p>
+              <p>What is at the core or the heart of the business? Importantly, also think about what the benefits of this are to customers or clients. If you want to develop a relationship with customers then it is becoming ever more important that your business has a purpose – other than making a profit – for them to relate to and share in. What you need to consider here is why should the purpose of your business be of interest to anyone else?</p>
+              <button class="button examples-button">See Examples</button>
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.purpose" data-parsley-required
+                        data-parsley-error-message="Please complete to continue" tabindex="2"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="example-container clearfix">
+        <div class="container clearfix">
+          <aside class="answer-example _1">
+            <h3>Purpose example 1</h3>
+            <p>The purpose of a talent management agency in the UK was clarified as such, ‘We discover, develop and deliver talent. We believe everyone has a talent and it should be looked after properly.’ The value of the reason the business exists is felt by the people with talent, i.e. the businesses potential clients.</p>
+          </aside>
+
+          <aside class="answer-example _2">
+            <div class="example-close"></div>
+            <h3>Purpose example 2</h3>
+            <p>A UK business support company defined their reason for being as such; ‘To provide an inspirational environment of informational products, supportive community and expert leadership, to help small businesses in the UK start and grow.’ The value of this purpose to any client is clear to see.</p>
+          </aside>
+
+          <aside class="example-explanation">
+            <p>All examples given are from real businesses that we’ve worked with to realise and clarify their purpose. These examples were reached through a series of iterations and development, so don’t think you need to get something so succinct first time. Write a purpose then develop and rewrite here until you’re happy with it.</p>
+          </aside>
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Personality</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+           <aside class="form-field-description textarea">
+            <div>
+              <h5>You Wrote</h5>
+              <p>{{brand.brand.how_you_do}}</p>
+
+              <br>
+              <h5>Now Think</h5>
+              <p>You’ve written about how people might experience your business, let’s refer to how you behave as your personality.</p>
+              <p>People’s experience of you will shape their opinion of you, and importantly how they then talk about you to their friends and wider social networks. Remember that people’s experience of your brand is not only shaped by what you say, so it is important to consider how people might talk about their experience of you. What impression do you leave with people? What is the personality of your business?</p>
+              <button class="button examples-button">See Examples</button>
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.personality" data-parsley-required
+                        data-parsley-error-message="Please complete to continue" tabindex="3"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="example-container clearfix">
+        <div class="container clearfix">
+          <aside class="answer-example _1">
+            <h3>Personality example 1</h3>
+            <p>A London-based management consultancy thought beyond the obvious in their industry (hard working, trusted, driven), and reflected two points commonly raised internally and by their clients - their meritocratic nature, and that they're not afraid to make fun of themselves. By defining their personality clearly it helped them understand a point of differentiation they had from their competition, which in turn informs recruitment, training and their marketing collateral.</p>
+          </aside>
+
+          <aside class="answer-example _2">
+            <div class="example-close"></div>
+            <h3>Personality example 2</h3>
+            <p>A leading business-support company identified that they are a guide to their clients through the world of business. Their approach is one of inspiration rather than instruction, rather than saying ‘do it like this’ they might say ‘doing it like this worked for us’. A ‘can do’ and ‘why not?’ personality runs through the core of their business.</p>
+          </aside>
+
+          <aside class="example-explanation">
+            All examples given are from real businesses that we’ve worked with to realise and clarify their personality. These examples were reached through a series of iterations and development, so don’t think you need to get something so succinct first time. Write a personality then develop and rewrite here until you’re happy with it.
+          </aside>
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Market</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <div>
+              <h5>You Wrote</h5>
+              <p>{{brand.brand.target_audience}}</p>
+
+              <br>
+              <h5>Now Think</h5>
+              <p>You’ve explained who your target audience are, let’s call this your market.</p>
+              <p>Are you putting limits on your potential audience that don’t actually exist, such as geographical location, etc? Is your market too broad, and therefore not allowing you to target people effectively, or too narrow, meaning you don’t get enough customers? Having a clear idea about your market is essential to developing a strategic approach that might appeal to them.</p>
+
+              <p>Be aware that your market is always developing and changing, so your market may be different in a year’s time.</p>
+              <button class="button examples-button">See Examples</button>
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.market" data-parsley-required
+                        data-parsley-error-message="Please complete to continue" tabindex="4"></textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="example-container clearfix">
+        <div class="container clearfix">
+          <aside class="answer-example _1">
+            <h3>Market example 1</h3>
+            <p>A UK business-support company recognised that their audience are individuals seeking to turn their passion into a business. Or put another way, rather than thinking their market is anyone starting a business they identified the thousands of ‘kitchen-table start-ups’ through the UK. Clearly defining their target audience has allowed them to focus on this audience - both with the tone and type content they produce, their visual style, and in the new tools they're looking to develop in the future.</p>
+          </aside>
+
+          <aside class="answer-example _2">
+            <div class="example-close"></div>
+            <h3>Market example 2</h3>
+            <p>A business based in the UK specialises in Chinese social media for UK brands. Their market can be literally any UK business who want to better communicate with Chinese consumers through Chinese social media. This is a large market, so they have selected a few specific sectors to focus on. Sometimes it’s necessary to be selective and not try and throw your net too wide.</p>
+          </aside>
+
+          <aside class="example-explanation">
+            All examples given are from real businesses that we’ve worked with to realise and clarify their market. These examples were reached through a series of iterations and development, so don’t think you need to get something so succinct first time. Identify a market then develop and rewrite here until you’re happy with it.
+          </aside>
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Competition</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <div>
+              <h5>You Wrote</h5>
+              <p>{{brand.brand.competition_1}}</p>
+
+              <br>
+              <h5>Now Think</h5>
+              <p>Identifying your competition is an important first step.</p>
+              <p>In analysing your competition can you identify what they are doing that you aren’t, or can you see how they present themselves both in written content and visually? Are you clearly identifiable from your competition? You don’t want to be confused for someone else, or them to be confused for you. Your definition of who you are as a business should not be reliant on referencing your competition, but that doesn’t mean that you should ignore them. It is useful to know how you differ from your competitors, and in what areas you might have a competitive advantage.</p>
+
+              <p>As with your market, be aware that your competitors are always developing and changing themselves, and new competition is always being added.</p>
+              <button class="button examples-button">See Examples</button>
+            </div>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <textarea ng-model="brand.brand.competition_2" data-parsley-required
+                        data-parsley-error-message="Please complete to continue" tabindex="5"> data-parsley-error-message="Please complete to continue"</textarea>
+            </div>
+            <div class="overlay">
+              Click to edit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="example-container clearfix">
+        <div class="container clearfix">
+          <aside class="answer-example _1">
+            <h3>Competition example 1</h3>
+            <p>The competition for an online brand development tool - (ring any bells?) - extends beyond other online tools. Books, blog posts and videos, talks, brand agencies and brand consultants all compete for the same attention and revenue. Defining their competitors in a broader sense has allowed the creators to focus on points of difference - both in functionality and the way they communicate.</p>
+          </aside>
+
+          <aside class="answer-example _2">
+            <div class="example-close"></div>
+            <h3>Competition example 2</h3>
+            <p>A London-based management consultancy found that their competition included some very large businesses, or more specifically a certain section of very large businesses who specialise in a similar offering. Your competition may not simply be businesses who are of a similar size to you.</p>
+          </aside>
+
+          <aside class="example-explanation">
+            All examples given are from real businesses that we’ve worked with to realise and clarify their competition. These examples were reached through a series of iterations and development, so don’t think you need to get something so succinct first time. Identify the competition then develop and rewrite here until you’re happy with it.
+          </aside>
+        </div>
+      </div>
+
+      <div class="save-button-wrapper">
+        <button class="button save-proceed-button" ng-click="save()">Save and proceed to review your brand</button>
+        <button class="button main-button back-button opaque-button">Previous step</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- STAGE 4 QUESTIONS REVIEW -->
+  <section id="stage-four" class="questionnaire">
+    <div class="container">
+      <h4>4. Review</h4>
+      <h2 class="accordion-title">Review</h2>
+    </div>
+
+    <div class="section-content">
+      <div class="container">
+        <label><h3>Proposition</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <h5>Now Think</h5>
+            <p>Can you define your business and brand proposition, and its value to people more clearly? Don’t be afraid to iterate and rework what you’ve written, the more you develop your proposition the clearer it will become to you.</p>
+            <!-- Needs an after element -->
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <!-- Needs an after element; z-indexed behind the textarea -->
+              <textarea ng-model="brand.brand.proposition">{{brand.proposition}}</textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Purpose</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <h5>Now Think</h5>
+            <p>Can you define the purpose of your business, and its value to people more clearly? Be honest with what value you think people get from your business.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <!-- Needs an after element; z-indexed behind the textarea -->
+              <textarea ng-model="brand.brand.purpose">{{brand.purpose}}</textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Personality</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <h5>Now Think</h5>
+            <p>Can you define what peoples’ experience might be of dealing with you more clearly? How do you really come across? It is no use pretending here – be authentic.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <!-- Needs an after element; z-indexed behind the textarea -->
+              <textarea ng-model="brand.brand.personality">{{brand.personality}}</textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Market</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <h5>Now Think</h5>
+            <p>Can you define your audience and market more clearly? Remember that you are going to need to communicate your business and brand to your market so a more niche audience may help create a more succinct message.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <!-- Needs an after element; z-indexed behind the textarea -->
+              <textarea ng-model="brand.brand.market">{{brand.market}}</textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <label><h3>Competition</h3></label>
+      </div>
+
+      <div class="answer-container textarea">
+        <div class="container clearfix">
+
+          <aside class="form-field-description textarea">
+            <h5>Now Think</h5>
+            <p>Can you define your competition more clearly? Your competition will change as your business changes, so don’t forget to keep reviewing this.</p>
+          </aside>
+
+          <div class="formfield-overlay-wrapper textarea">
+            <div class="formfield-wrapper">
+              <!-- Needs an after element; z-indexed behind the textarea -->
+              <textarea ng-model="brand.brand.competition_2">{{brand.competition_2}}</textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="save-button-wrapper">
+        <button class="button save-proceed-button" ng-click="saveAndEmail()">I'm happy with this at the moment</button>
+        <!-- <button class="button main-button back-button">I want to edit further</button>    -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- STAGE 5 SUBMIT RESULTS -->
+  <section id="stage-five">
+    <div class="container">
+      <h4>5. Congratulations</h4>
+      <h2 class="accordion-title">Congratulations!</h2>
+
+      <div class="section-content">
+        <div class="final-section-copy">
+
+          <p>You're done! <br><br> We'll email you shortly with a PDF version of your new brand, so watch out for it in your inbox.</p>
+
+          <br><br>
+
+          <h2>Found this useful?</h2>
+
+          <p>If you've found this tool useful, we'd really appreciate it if you could share it with your network. We've even put the buttons right here to make it easy for you:</p>
+
+          <ul class="social-media-buttons">
+            <li>
+              <a href="https://twitter.com/share?url=http://www.helpmeclarify.com&text=Ever+struggle+to+communicate+what+your+business+does,+and+the+value+it+provides&#63;+Try+Clarify+-+" target="_blank" class="button">Share on Twitter</a>
+            </li>
+            <li>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.helpmeclarify.com&title=Clarify &summary=Ever+struggle+to+communicate+what+your+business+does,+and+the+value+it+provides?+Try+Clarify.&source=Clarify" target="_blank" class="button">Share on LinkedIn</a>
+            </li>
+          </ul>
+
+          <br><br>
+
+          <h2>Not sure what to do now?</h2>
+
+          <p>Read our guide to '<a href="/next-steps" data-page="next-steps" class="open-page">next steps</a>'.</p>
+        </div>
+
+        <aside class="founder-logos">
+          Brought to you by:
+          <ul>
+            <li>
+              <a href="http://www.1977design.com/" target="_blank">
+                <img src="/assets/1977-logo.png" alt="1977 Designs">
+                <p>1977 Design and Brand Consultancy</p>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.builtbyclick.com" target="_blank">
+                <img src="/assets/click.png" alt="Click Studios">
+                <p>Click Studios</p>
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <footer class="links">&copy; <a href="http://www.builtbyclick.com" target="_blank">Click Studio</a> &amp; <a href="http://www.1977design.com/" target="_blank">1977 Design</a> 2015</footer>
+
+      </div>
+
+    </div>
+  </section>
+</div>

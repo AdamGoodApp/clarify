@@ -1,0 +1,111 @@
+//***** Base Config *****//
+
+// Configure as necessary
+$base-font-family       : "open-sans" sans-serif;
+$base-font-weight       : 300;
+$base-text-color        : #FFFFFF;
+$base-background-color  : #FFFFFF;
+
+//***** Text *****//
+
+$base-font-size           : 16px;
+$h1-font-size             : 24px;
+$h2-font-size             : 44px;
+$h3-font-size             : 24px;
+$h4-font-size             : 16px;
+$content-font-size        : 14px;
+$button-font-size         : 14px;
+$footer-font-size         : 12px;
+$large-content-size       : 24px;
+
+$condensed-line-height : 1.35;
+$base-line-height : 1.5;
+
+$h1-font-family           : helvetica sans-serif;
+$h2-font-family           : "open-sans" sans-serif;
+$question-font-family     : "open-sans";
+$button-font-family       : "open-sans";
+
+
+//***** Font Weights *****//
+
+// Configure as necessary 
+$font-weight--thin       : 400;
+$font-weight--medium     : 600;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 800;
+
+
+//***** Z-Index Layers *****//
+
+$z-index-layer--fourth   : 500;
+$z-index-layer--third    : 600;
+$z-index-layer--second   : 700;
+$z-index-layer--first    : 800;
+
+//***** Colors *****//
+
+$light-grey                 : #ADAEB0;
+$lighter-grey               : #E6E6E6;
+$grey                       : #4C5867;
+$dark-grey                  : #404041;
+
+$welcome-page-bg            : #55BCEB;
+$description-page-bg        : #86CEBC;
+$overlay-bg                 : #e5e6e8;
+
+$error                      : #B04052;
+
+$stage-one-bg               : #5EC2A5;
+$stage-one-secondary        : #4FA98D;
+$stage-two-bg               : #FDBF56;
+$stage-three-bg             : #F7975F;
+$stage-three-secondary      : #D8973D;
+$stage-four-bg              : #F48F9D;
+$stage-four-secondary       : #CC697A;
+$stage-five-bg              : #89C3EA;
+$stage-six-bg               : #55BCEB;
+
+// Buttons
+
+$button-border-right            : #00ACD4;
+$button-border-bottom           : #00B5D8;
+$inverted-button-border-right   : #00ACD4;
+$inverted-button-border-bottom  : #00B5D8;
+
+$white    : #FFF;
+$black    : #000;
+
+//***** Paddings *****//
+
+$element-padding--ultra-thick   : 100px;
+$element-padding--thick         : 50px;
+$element-padding--regular       : 35px;
+$element-padding--thin          : 25px;
+  
+$element-margin--ultra-thick    : 100px;
+$element-margin--thick          : 50px;
+$element-margin--regular        : 35px;
+$element-margin--thin           : 25px;
+$element-margin--ultra-thin     : 15px;
+
+//***** Breakpoints *****//
+
+// Any styles not wrapped in a breakpoint mixin will be displayed from zero pixel width up 
+$max-large-mobile--portrait-width     : max-width 30.0000em; //max width 480px @16px
+$max-large-mobile--landscape-width    : max-width 41.6875em; //max width 667px @16px
+$min-tablet                           : 48.0000em; //min width 768px @16px
+$max-tablet                           : max-width 48.0000em; //min width 768px @16px
+$max-large-tablet                     : max-width 53.1250em; //max width 850px @16px
+$max-main-container                   : max-width 64.0000em; //max width 1024px @16px (size of main container)
+
+// Any styles not wrapped in a breakpoint mixin will be displayed from zero pixel width up 
+// $max_small_mobile: max-width 20em; //min width 320px @16px
+// $max_large_mobile: max-width 30.0625em; //max width 481px @16px
+// $large_mobile: 30.0625em; //min width 481px @16px
+// $max_large_mobile_landscape: max-width 41.6875em; //max width 667px @16px
+// $large_mobile_landscape: 41.6875em; //min width 667px @16px
+// $max_tablet: max-width 48.000em; //max width 768px @16px
+// $tablet: 48.000em; //min width 768px @16px 
+// $max_large_tablet: max-width 64.000em; //max width 1024px @16px
+// $min_large_tablet: 64.000em; //min width 1024px @16px

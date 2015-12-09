@@ -1,0 +1,107 @@
+@import "../_all-globals";
+
+#stage-three {
+  background-color: $stage-three-bg;
+
+  .examples-button {
+    background-color: $black;
+    border: 3px solid $black;
+    color: $overlay-bg;
+    margin-bottom: 0;
+    margin-top: 20px;
+    transition: all 0.5s ease-in-out;
+    width: 200px;
+    z-index: 999;
+
+    &:hover {
+      background-color: transparent;
+      color: $black;
+    }
+  }
+
+  .example-container {
+    display: none;
+    background-color: rgba($white, 0.2);
+    position: relative;
+    width: 100%;
+
+    &:before {
+      background-color: rgba($white, 0.2);
+      content: "";
+      display: inline-block;
+      height: 100%;
+      left: -200%;
+      position: absolute;
+      top: 0;
+      visibility: visible;
+      width: 200%;
+    }
+
+    &:after {
+      background-color: rgba($white, 0.2);
+      content: "";
+      display: inline-block;
+      height: 100%;
+      right: -200%;
+      position: absolute;
+      top: 0;
+      visibility: visible;
+      width: 200%;
+    }
+
+    .answer-example {
+      padding: 25px;
+      width: 49.8%;
+
+      p {
+        font-style: italic;
+      }
+
+      &._1 {
+        float: left;
+        position: relative;
+      }
+
+      &._2 {
+        border-left: 6px solid $stage-three-bg;
+        float: left;
+        position: relative;
+        margin-left: -3px;
+
+        .example-close {
+          background: image-url('close_btn.svg') no-repeat top left;
+          background-size: 75px;
+          cursor: pointer;
+          height: 75px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 75px;
+        }
+      }
+    }
+
+    .example-explanation {
+      border-top: 6px solid $stage-three-bg;
+      float: left;
+      font-style: italic;
+      padding: $element-padding--regular;
+      width: 100%;
+    }
+  }
+
+  .save-proceed-button {
+    color: $stage-three-bg;
+    float: right;
+    width: 65%;
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      float: none;
+      width: 80%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

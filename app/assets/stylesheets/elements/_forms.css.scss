@@ -1,0 +1,169 @@
+@import "../_all-globals";
+
+/* INPUTS */
+textarea, input {
+  border: none;
+  box-sizing: border-box;
+  color: $black;
+  height: 100%;
+  overflow: scroll;
+  padding: em($element-padding--thin);
+  padding-left: 0;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  z-index: $z-index-layer--second;
+
+  @include breakpoint($max-large-tablet) {
+    padding: em($element-padding--thin);
+
+    &:focus + .parsley-errors-list {
+      opacity: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.disabled {
+    background: $overlay-bg;
+    color: rgba($black, 0.5);
+  }
+}
+
+input {
+  min-height: 75px;
+}
+
+textarea {
+  min-height: 300px;
+}
+
+/* ERRORS */
+.parsley-errors-list {
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 1s ease-in-out;
+  z-index: 9999;
+}
+.parsley-errors-list li {
+  background-color: $error;
+  border: none;
+  color: white;
+  margin: 0;
+  list-style: none;
+  padding: 26px;
+
+  @include breakpoint($max-large-mobile--landscape-width) {
+    padding: 15px;
+  }
+}
+
+.questionnaire {
+
+  h3 {
+    font-family: $question-font-family;
+    margin: $element-margin--thick 0 $element-margin--ultra-thin;
+  }
+  
+  .answer-container.input {
+    min-height: 75px;
+  }
+
+  .answer-container.textarea {
+    min-height: 300px;
+  }
+
+  .answer-container {
+    background-color: rgba($black, 0.15);
+    position: relative;
+    width: 100%;
+
+    @include breakpoint($max-large-tablet) {
+      display: table;
+      padding: em($element-padding--thin) 0;
+    }
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      height: auto;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    .formfield-overlay-wrapper {
+      float: left;
+      height: 100%;
+      position: relative;
+      width: 50%;
+
+      @include breakpoint($max-large-tablet) {
+        width: 100%;
+      }
+
+      .formfield-wrapper {
+        display: inline-block;
+        height: 100%;
+        position: relative;
+        width: 100%;
+
+        &:before, &:after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+        }
+
+        &:before {
+          background: image-url('pencil.svg') no-repeat right 20px;
+          background-size: 26px;
+          background-color: $overlay-bg;
+          height: 100%;
+          left: -200%;
+          transition: all 1s ease-in-out;
+          visibility: visible;
+          width: 200%;
+          z-index: $z-index-layer--third;
+
+          @include breakpoint($max-large-tablet) {
+            display: none;
+          }
+        }
+
+        &.active {
+            &:before {
+              background: none;
+              background-color: $white;
+              box-shadow: 10px 10px 30px rgba($black, 0.2);
+            }
+            textarea, input {
+                box-shadow: 20px 10px 30px rgba($black, 0.2);
+            }
+        }
+
+        &.hascontent:before {
+            background: none;
+            background-color: $white;
+        }
+      }
+
+      .overlay {
+        background-color: $overlay-bg;
+        color: $black;
+        cursor: pointer;
+        height: 100%;
+        padding: em($element-margin--thin);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: $z-index-layer--first;
+      }
+    }
+  }
+}

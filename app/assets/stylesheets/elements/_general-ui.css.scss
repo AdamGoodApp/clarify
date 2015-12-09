@@ -1,0 +1,102 @@
+@import "../_all-globals";
+
+//** BASE DECLARATIONS FOR HELPER CLASSES **//
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+// Hides text for background images
+.hidden {
+  position: absolute;
+  left: -4000px;
+}
+
+.background-white{
+  background: $white;
+}
+
+.text-right{
+  text-align: right
+}
+
+.text-left{
+  text-align: left
+}
+
+.text-to-front {
+  position: relative;
+  z-index: $z-index-layer--first;
+}
+
+.note {
+  background: rgba($black, 0.15);
+  font-style: italic;
+  margin: $element-margin--thick 0;
+  padding: $element-padding--thick 0;
+  position: relative;
+
+  &:before, &:after {
+    background: rgba($black, 0.15);
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+  }
+
+  &:before {
+    left: -100%;
+  }
+
+  &:after {
+    right: -100%;
+  }
+}
+  
+.container.centered-content {
+  display: table; 
+  height: 100%;
+
+  .centered-content-wrapper {
+    display: table-cell; 
+    vertical-align: middle;
+  }
+}
+
+.tooltip {
+  background: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: none;
+  height: 80px !important;
+  left: 50%;
+  margin-top: -90px;
+  overflow: visible !important;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  z-index: 8000;
+
+  @include breakpoint($max-tablet) {
+    display: none !important;
+  }
+
+  &:after {
+    border-color: black transparent transparent transparent;
+    border-style: solid;
+    border-width: 24px 20px 0 20px;
+    bottom: -17px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    width: 0;
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails clarify: development" uuid="cf9cacd9-0842-4f09-a804-6957fb237bb2" />
+    <data-source name="Rails clarify: test" uuid="ec7808e4-edca-48dc-b03f-4b041de39ba6">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails clarify: production" uuid="44cd574a-dd59-4029-8773-f7101a7d237b">
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>

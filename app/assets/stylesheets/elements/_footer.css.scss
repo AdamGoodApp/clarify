@@ -1,0 +1,14 @@
+@import "../_all-globals";
+
+span.links {
+    color: rgba($white, 0.5);
+
+    a {
+      color: rgba($white, 0.5);
+      transition: all 0.7s ease-in-out;
+
+      &:hover {
+        color: rgba($white, 1);
+      }
+    }
+  }

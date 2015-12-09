@@ -1,0 +1,86 @@
+@import "../_all-globals";
+
+//** HOME SCREEN STYLING **//
+
+#welcome {
+  background-color: $welcome-page-bg;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @include breakpoint($max-large-mobile--landscape-width) {
+    padding: 50px 0;
+  }
+
+  h2 {
+    display: inline-block;
+    line-height: $condensed-line-height;
+    margin: 0 10% 0 0;
+    padding: $element-padding--regular;
+    vertical-align: middle;
+    width: 50%;
+
+    @include breakpoint($max-main-container) {
+      margin: 0;
+      padding: em($element-padding--thick, $h2-font-size) em($element-padding--ultra-thick, $h2-font-size);
+      width: 100%;
+    }
+
+    @include breakpoint($max-tablet) {
+      padding: 20px 0 50px;
+    }
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      font-size: 2em;
+      padding: 20px 0 50px;
+    }
+  }
+
+  .home-button-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+
+    button, a {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+
+    a {
+      line-height: 96px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .read-more {
+      @include button-text(#55bceb);
+    }
+
+    @include breakpoint($max-main-container) {
+      padding: 0 em($element-padding--ultra-thick);
+      width: 100%;
+
+      button, a {
+        width: 45%;
+
+        &.read-more {
+          margin-right: 9%;
+        }
+      }
+    }
+
+    @include breakpoint($max-tablet) {
+      padding: 0;
+    }
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      padding: 0;
+
+      button, a {
+        width: 100%;
+      }
+    }
+
+  }
+}
+

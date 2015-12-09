@@ -1,0 +1,10 @@
+#contact {
+    a {
+        opacity: 0.6;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

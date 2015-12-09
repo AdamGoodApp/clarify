@@ -1,0 +1,252 @@
+@import "../_all-globals";
+
+//** ANIMATIONS FOR PROGRESS **//
+
+
+@-webkit-keyframes expand {
+  0% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+  50% {
+    background-size: 20px;
+    height: 30px;
+    margin: -6px 4px;
+    width: 30px;
+  }
+  100% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+}
+
+@-moz-keyframes expand {
+  0% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+  50% {
+    background-size: 20px;
+    height: 30px;
+    margin: -6px 4px;
+    width: 30px;
+  }
+  100% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+}
+
+@-ms-keyframes expand {
+  0% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+  50% {
+    background-size: 20px;
+    height: 30px;
+    margin: -6px 4px;
+    width: 30px;
+  }
+  100% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+}
+
+@-o-keyframes expand {
+  0% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+  50% {
+    background-size: 20px;
+    height: 30px;
+    margin: -6px 4px;
+    width: 30px;
+  }
+  100% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+}
+
+@keyframes expand {
+  0% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+  50% {
+    background-size: 20px;
+    height: 30px;
+    margin: -6px 4px;
+    width: 30px;
+  }
+  100% {
+    background-size: 14px;
+    height: 18px;
+    margin: 0 10px;
+    width: 18px;
+  }
+}
+
+//** GENERAL HEADER STYLING **//
+
+#primary-header {
+  background-color: $white;
+  box-shadow: 0px 5px 5px rgba($black, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-layer--first;
+
+  &:after {
+    background-color: black;
+    background-image: image-url('save-white.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    content: "Changes saved";
+    height: 75px;
+    left: 50%;
+    line-height: 20px;
+    margin-left: -99px;
+    padding: 26px 26px 26px 60px;
+    opacity: 0;
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    transition: opacity 1s ease-in-out;
+    z-index: $z-index-layer--second;
+  }
+
+  &.saving:after {
+    opacity: 1;
+  }
+
+  .company-logo {
+    background: image-url('clarify_logo_grey.svg') no-repeat left center;
+    background-size: 125px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 75px;
+    width: 125px;
+
+    @include breakpoint($max-large-mobile--portrait-width) {
+      background-size: 100px;
+      width: 100px;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .form-progress {
+    display: inline-block;
+    float: left;
+    margin: 28px 0;
+    opacity: 0;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    width: calc(100% - 125px - 90px);
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include breakpoint($max-large-mobile--portrait-width) {
+      width: calc(100% - 100px - 80px);
+    }
+
+    ul {
+      height: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        background-color: $overlay-bg;
+        border-radius: 50%;
+        display: inline-block;
+        height: 18px;
+        margin: 0px 10px;
+        position: relative;
+        transition: background-color 1s ease-in-out, background-size 1s ease-in-out, height 1s ease-in-out, margin 1s ease-in-out, width 1s ease-in-out;
+        width: 18px;
+
+        @include breakpoint($max-large-mobile--portrait-width) {
+          height: 12px;
+          margin: 0 5px;
+          width: 12px;
+        }
+
+        &.success {
+          background: image-url('tick.svg') no-repeat center center;
+          background-size: 14px;
+          cursor: pointer;
+
+          -webkit-animation: expand 1.25s 1;
+          -moz-animation:    expand 1.25s 1;
+          -o-animation:      expand 1.25s 1; 
+          animation:         expand 1.25s 1;
+
+          &:first-child {
+            background-color: $stage-one-bg;
+          }
+
+          &:nth-child(2) {
+            background-color: $stage-two-bg;
+          }
+
+          &:nth-child(3) {
+            background-color: $stage-three-bg;
+          }
+
+          &:last-child {
+            background-color: $stage-four-bg;
+          }
+        }
+
+        &.invalid {
+          background: image-url('cross.svg') no-repeat center center;
+          background-color: $error;
+          background-size: 14px;
+
+          -webkit-animation: expand 1.25s 1;
+          -moz-animation:    expand 1.25s 1;
+          -o-animation:      expand 1.25s 1; 
+          animation:         expand 1.25s 1;
+        }
+      }
+    }
+  }
+}
+
+.pages #primary-header {
+  top: 0;
+
+  .form-progress {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../_all-globals";
+
+h1 {
+  font-size: em($h1-font-size);
+  font-weight: $font-weight--medium;
+
+  @include breakpoint($max-large-mobile--portrait-width) {
+    font-size: em($h1-font-size) * .9;
+  }
+}
+
+h2 {
+  font-family: $h2-font-family;
+  font-size: em($h2-font-size);
+  font-weight: $font-weight--bold;
+  margin: 0 0 em($element-margin--regular, $h2-font-size) 0;
+
+  @include breakpoint($max-large-mobile--portrait-width) {
+    font-size: em($h2-font-size) * .9;
+  }
+}
+
+h3 {
+  font-size: em($h3-font-size);
+  font-weight: $font-weight--medium;
+  margin: em($element-margin--thin, $h3-font-size) 0;
+
+  @include breakpoint($max-large-mobile--portrait-width) {
+    font-size: em($h3-font-size) * .9;
+  }
+}
+
+h4 {
+  font-size: em($h4-font-size);
+  font-weight: $font-weight--medium;
+
+  @include breakpoint($max-large-mobile--portrait-width) {
+    font-size: em($h4-font-size) * .9;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../_all-globals";
+
+#stage-four {
+  background-color: $stage-four-bg;
+
+  .save-proceed-button {
+    color: $stage-four-bg;
+    width: 65%;
+
+    @include breakpoint($max-large-mobile--landscape-width) {
+      float: none;
+      width: 80%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  what_you_do: MyText
+  why_you_do: MyText
+  how_you_do: MyText
+  target_audience: MyText
+  competition_1: MyText
+  proposition: MyText
+  purpose: MyText
+  personality: MyText
+  market: MyText
+  competition_2: MyText
+  retrieval_key: MyString
+
+two:
+  email: MyString
+  what_you_do: MyText
+  why_you_do: MyText
+  how_you_do: MyText
+  target_audience: MyText
+  competition_1: MyText
+  proposition: MyText
+  purpose: MyText
+  personality: MyText
+  market: MyText
+  competition_2: MyText
+  retrieval_key: MyString

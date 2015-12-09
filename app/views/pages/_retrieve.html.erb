@@ -1,0 +1,19 @@
+<article id="retrieve">
+
+  <h2>Retrieve</h2>
+
+  <p>If you've already started Clarify, you will have been sent an email with your unique Clarify URL - which allows you to retrieve, review, and edit your brand at any time.</p>
+
+  <p>If this email's gone missing, enter your email address below and we'll re-send it.</p>
+
+  <p class="success feedback">An email has been sent containing your unique Clarify URL. Please check your inbox.</p>
+
+  <p class="error feedback">Sorry, but we can't find your email address in our records. Please check and try again.</p>
+
+  <%= form_tag("/retrieve_brands", method: "get") do %>
+    <label for="retrieve-email"><h3>Email address</h3></label>
+    <%= email_field_tag 'email', nil , id: "retrieve-email" %>
+    <%= submit_tag "Re-send my unique Clarify URL", class: "button retrieve_button" %>
+  <% end %>
+
+</article>
